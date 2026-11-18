@@ -42,4 +42,8 @@ public class Traversal {
     }
     printUnderThreshold(current.right, threshold);
   }
+  public static int countNodes(TreeNode current) {
+    if (current == null) return 0;
+    return 1 + countNodes(current.left) + countNodes(current.right);
+  }
 }

@@ -34,4 +34,12 @@ public class Traversal {
     System.out.println(current.value);
     printInorder(current.right);
   }
+  public static void printUnderThreshold(TreeNode current, int threshold) {
+    if (current == null) return;
+    printUnderThreshold(current.left, threshold);
+    if (current.value < threshold) {
+      System.out.println(current.value);
+    }
+    printUnderThreshold(current.right, threshold);
+  }
 }
